@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+	--very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 15px;
+	font-family: 'Lexend Deca', sans-serif;
+	color: var(--transparent-white);
+}
+
+.wrapper {
+	margin: 5em auto;
+	width: 90%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card {
+	height: 500px;
+	width: 350px;
+	padding: 3.25em;
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.card>img {
+	width: 4.5em;
+}
+
+.card>h1 {
+	font-family: 'Big Shoulders Display';
+	font-size: 2.5rem;
+	color: var(--very-light-gray);
+}
+
+.card>p {
+	line-height: 2;
+}
+
+.sedans {
+	background-color: var(--bright-orange);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.sedans>button {
+	color: var(--bright-orange);
+}
+
+.suv {
+	background-color: var(--dark-cyan);
+}
+
+.suv>button {
+	color: var(--dark-cyan);
+}
+
+.luxury {
+	background-color: var(--very-dark-cyan);
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.luxury>button {
+	color: var(--very-dark-cyan);
+}
+
+.card button {
+	cursor: pointer;
+	background-color: var(--very-light-gray);
+	border: 2px solid var(--very-light-gray);
+	border-radius: 5em;
+	padding: 1em 2em;
+	margin-top: auto;
+	width: 11em;
+}
+
+button:hover {
+	background-color: transparent;
+	color: var(--very-light-gray);
+}
+
+@media (min-width: 1070px) {
+	.container {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.card {
+		flex: 0 0 350px;
+	}
+
+	.sedans {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+	}
+
+	.luxury {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+
+}
