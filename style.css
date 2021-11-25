@@ -21,6 +21,10 @@ body {
 	color: var(--transparent-white);
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
 	margin: 5em auto;
 	width: 90%;
